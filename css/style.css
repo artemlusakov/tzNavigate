@@ -1,0 +1,287 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+header{
+    display: flex;
+}
+
+/* Навигация */
+nav{
+    background-color: #53585c;
+    width: 210px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff ;
+    word-break: break-all;
+}
+
+nav a {
+    color: #fff;
+
+}
+
+nav a:hover {
+    background-color: #3E4A51;
+}
+
+#Logo img{
+    height: 50px;
+    width: 50px;
+    margin: 0 10px;
+}
+
+#Logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: #fff 1px solid;
+    width: 100%;
+}
+
+/* Мэйн секция навикации */
+.navMainSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60%;
+   
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+
+.navMainSection a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    padding: 5px 0;
+}
+
+
+.navMainSection a img {
+    margin-right: 10px;
+    margin-left: 20px;
+    height: 34px;
+    width: 34px;
+}
+
+.navMainSection li ul {
+    top: 103px;
+    padding: 7px 0 ;
+    position: absolute;
+    left: 210px;
+    background-color: #53585c;
+    border-radius: 0 10px 10px 0;
+    display: none;
+}
+
+.navMainSection li:hover > ul{
+    display: inline;
+}
+
+/* Справочная информация */
+.navBackgroundInfoSection{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    border-bottom: 1px solid #fff ;
+}
+
+.navBackgroundInfoSection li{
+    text-align: center;
+    border-radius: 5px;
+    padding: 2px;
+    word-break: break-all;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 9px;
+    border: 1px solid #fff;
+}
+
+.navBackgroundInfoSection img{
+    width: 34px;
+    height: 34px;
+    padding: 3px;
+}
+
+
+/* Доп секция Навигации */
+
+.navDopSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 15%;
+   
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+
+.navDopSection a{
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+
+.navDopSection a img {
+    margin-right: 10px;
+    margin-left: 20px;
+    height: 34px;
+    width: 34px;
+}
+
+/* Переключатель */
+
+.showMenu{
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.navSwitchSection{
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+
+.navSwitchSection h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 25px;
+  }
+
+  .switch input {display:none;}
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    left: -4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+/* Сворачивание */
+
+nav.clos-menu{
+    width: 100px;
+}
+
+.navMainSection.clos-menu h3{
+    display: none;
+}
+
+.navMainSection.clos-menu a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navMainSection.clos-menu img{
+    margin: 0;
+}
+
+.navBackgroundInfoSection.clos-menu h3{
+    display: none;
+}
+
+.navDopSection.clos-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.navDopSection.clos-menu img{
+    margin: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.navDopSection.clos-menu a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navDopSection.clos-menu h3{
+    display: none;
+}
+
+.navSwitchSection.clos-menu h3{
+
+    font-size: 15px;
+
+}
+
+
+  @media (min-width: 320px) and (max-width: 390px) {
+
+    nav{
+        width: 150px;
+    }
+  }
